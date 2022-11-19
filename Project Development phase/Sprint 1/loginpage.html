@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Inventory Managment System - Login</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='reg.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">Login</div>
+        <div class="content">
+            <div class="mx-4 mt-2 text-danger" style="color: red;">{{ msg }}</div>
+            <form method="POST" action="">
+
+                <div class="login">
+
+                    <div class="input-box">
+                        <span class="detailslog">Username</span>
+                        <input type="text" placeholder="Enter your username" name="user" required>
+                    </div>
+
+                    <br>
+
+                    <div class="input-box">
+                        <span class="detailslog">Password</span>
+                        <input type="text" placeholder="Enter your password" name="password" required>
+                    </div>
+
+                    <br>
+
+                    <div class="button1">
+                        <input type="submit" value="Login">
+                    </div>
+                </div>
+
+                <p>Don't have an account? <a href="{{ url_for('register') }}">Register here</a></p>
+
+
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
